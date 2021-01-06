@@ -1,0 +1,4 @@
+.loading {
+  padding: 30rpx 0;
+  text-align: center;
+}

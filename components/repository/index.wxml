@@ -1,0 +1,40 @@
+<block>
+  <view class="nothing" wx:if="{{reposList.length == 0}}">
+    <image class="icon" src="../../images/search/nothing.png"></image>
+    <view>Nothing Found!</view>
+  </view>
+  <view 
+    wx-else
+    wx:for="{{reposList}}" 
+    wx:key="index" 
+    class="list-container" 
+    data-reposname="{{item.reposName}}"
+    bind:tap="checkDetail">
+    <view class="repos-name">{{item.reposName}}</view>
+    <view class="desc">{{item.desc}}</view>
+    <view class="info">
+      <text class="t" wx:if="{{!!item.language}}">{{item.language}}</text>
+      <image class="icon" src="../../images/trending/star.png"></image>
+      <text class="t">{{item.starSum}}</text>
+      <image class="icon" src="../../images/trending/fork.png"></image>
+      <text>{{item.fork}}</text>
+    </view>
+    <text class="star-timespan" wx:if="{{item.starTimespan}}">{{item.starTimespan + ' stars ' + timeSpan}}</text>
+    <view class="mark" 
+          wx:if="{{item.marked}}" 
+          catch:tap="changeMark"
+          data-reposindex="{{index}}"
+          data-mark="false">
+      <image src="../../images/trending/marked.png" />
+    </view>
+    <view class="mark" 
+          wx:else 
+          catch:tap="changeMark"
+          data-reposindex="{{index}}"
+          data-mark="true">
+      <image src="../../images/trending/unmark.png" />
+    </view>
+    
+    
+  </view>
+</block>

@@ -1,0 +1,9 @@
+<van-search 
+  value="{{ value }}" 
+  bind:change="onChange"
+  bind:search="onSearch"
+  placeholder="请输入搜索关键词" />
+<view class="loading" wx:if="{{isLoading}}">
+  <van-loading size="24px">加载中...</van-loading>
+</view>
+<repository wx:if="{{!isLoading && showData}}" reposList="{{repos}}" bind:changeMarkFn="changeMarkStatus"></repository>

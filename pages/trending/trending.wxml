@@ -1,0 +1,19 @@
+<header bind:tap="onTap">
+  <image class="icon" src="/images/trending/setting.png"></image>
+  <text>TRENDING</text>
+</header>
+<view class="loading" wx:if="{{isLoading}}">
+  <van-loading size="24px">加载中...</van-loading>
+</view>
+<repository wx:if="{{!isLoading && showData}}" reposList="{{repos}}" timeSpan="{{timeSpanText}}" bind:changeMarkFn="changeMarkStatus"></repository>
+<van-popup
+  show="{{ showPopup }}"
+  position="bottom"
+  custom-style="height: 400rpx;width:100%"
+>
+  <van-picker 
+    show-toolbar
+    columns="{{ columns }}" 
+    bind:cancel="onCancel"
+    bind:confirm="onConfirm" />
+</van-popup>

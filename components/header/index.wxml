@@ -1,0 +1,8 @@
+<van-sticky>
+  <view class="header" style = "padding-top:{{statusBarHeight+10+'px'}}"> 
+    <view class="title">
+      <slot></slot>
+    </view>
+  </view>
+</van-sticky>
+

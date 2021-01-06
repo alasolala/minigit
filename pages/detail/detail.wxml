@@ -1,0 +1,26 @@
+<view>
+  <view class="loading" wx:if="{{isLoading}}">
+    <van-loading size="24px">加载中...</van-loading>
+  </view>
+  <view wx:if="{{!isLoading && showData}}">
+    <view class="info">
+      <view class="name">
+        <image src="../../images/detail/repos.png"></image>
+        <text>{{info.name}}</text>
+      </view>
+      <view class="desc">
+        {{info.desc}}
+      </view>
+      <view class="star-fork">
+        <image class="icon" src="../../images/trending/star.png"></image>
+        <text class="t">{{info.star}}</text>
+        <image class="icon" src="../../images/trending/fork.png"></image>
+        <text>{{info.fork}}</text>
+      </view>
+    </view>
+    <view class="readme">
+      <wemark md="{{readme}}" type="wemark"></wemark>
+    </view>
+  </view>
+  
+</view>

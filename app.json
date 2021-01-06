@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/trending/trending",
+    "pages/search/search",
+    "pages/mark/mark",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#243b55"
+  },
+  "usingComponents": {
+    "repository": "/components/repository/index",
+    "van-loading": "@vant/weapp/loading/index"
+  },
+  "tabBar": {
+    "selectedColor": "#243b55",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/trending/trending",
+        "text": "trending",
+        "iconPath": "images/tab/trending-light.png",
+        "selectedIconPath": "images/tab/trending-dark.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "search",
+        "iconPath": "images/tab/search-light.png",
+        "selectedIconPath": "images/tab/search-dark.png"
+      },
+      {
+        "pagePath": "pages/mark/mark",
+        "text": "mark",
+        "iconPath": "images/tab/mark-light.png",
+        "selectedIconPath": "images/tab/mark-dark.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap75.json"
+}

@@ -1,0 +1,59 @@
+.list-container {
+  margin: 20rpx 20rpx;
+  border: 1px solid #eee;
+  padding: 30rpx;
+  box-shadow: 3rpx 3rpx 3rpx #eee;
+  position: relative;
+}
+.list-container .repos-name {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+.list-container .desc {
+  margin-top: 15rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+.list-container .info {
+  margin-top: 20rpx;
+  color: #666;
+  font-size: 26rpx;
+}
+.list-container .info .t {
+  margin-right: 25rpx;
+}
+.list-container .info .icon {
+  height: 25rpx;
+  width: 25rpx;
+  margin-right: 3rpx;
+}
+.list-container .star-timespan {
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+  color: #666;
+  font-size: 26rpx;
+}
+.list-container .mark {
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+  height: 80rpx;
+  width: 80rpx;
+  text-align: center;
+}
+.list-container .mark image {
+  height: 50rpx;
+  width: 50rpx;
+}
+.nothing {
+  text-align: center;
+  color: #ddd;
+  margin-top: 100rpx;
+}
+.nothing .icon {
+  height: 200rpx;
+  width: 200rpx;
+  margin-bottom: 20rpx;
+}
